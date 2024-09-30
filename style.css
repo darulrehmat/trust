@@ -220,7 +220,7 @@ nav .fas {
         margin-left: 0;
         z-index: 3;
         /* Ensure it's on top of other elements */
-        transition: right 0.5s ease;
+        transition: right 0.5s ease, left 0.3s ease;
         /* Transition to center when menu opens */
     }
 
