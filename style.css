@@ -646,6 +646,22 @@ p {
     }
 
     .doctor-box h3 {
+        font-size: 0.6rem;
+    }
+
+    .doctor-box p {
+        font-size: 0.5rem;
+    }
+}
+
+/* For screens below 500px, two boxes per row */
+@media (max-width: 300px) {
+    .doctor-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6px;
+    }
+
+    .doctor-box h3 {
         font-size: 0.5rem;
     }
 
