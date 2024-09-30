@@ -279,7 +279,7 @@ nav .fas {
     /* Move donate button to center when menu opens */
     nav ul.open~.nav-buttons #donate-btn {
         right: 50%;
-        transform: translateX(50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
     }
 }
 
