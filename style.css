@@ -287,8 +287,8 @@ nav .fas {
 @media only screen and (max-width: 450px) {
     /* Move donate button to 30% from the left when the menu opens */
     nav ul.open~.nav-buttons #donate-btn {
-        left: 30%; /* Position it 30% from the left edge */
-        transform: translateY(-50%); /* Maintain vertical alignment */
+        left: 25%; /* Position it 30% from the left edge */
+        transform: translateX(50%) translateY(-50%); /* Maintain vertical alignment */
     }
 }
 
