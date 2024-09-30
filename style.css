@@ -285,11 +285,10 @@ nav .fas {
 
 
 @media only screen and (max-width: 450px) {
-    /* Move donate button to the left when the menu opens */
+    /* Move donate button slightly to the left from center when menu opens */
     nav ul.open~.nav-buttons #donate-btn {
-        right: auto; /* Disable the right alignment */
-        left: 10px; /* Move the button towards the left */
-        transform: translateX(0) translateY(-50%); /* No horizontal translation, keep vertical centering */
+        right: 30%; /* Position it slightly left from center */
+        transform: translateX(30%) translateY(-50%); /* Shift it horizontally by 30% to fine-tune the position */
     }
 }
 
