@@ -284,6 +284,16 @@ nav .fas {
 }
 
 
+@media only screen and (max-width: 450px) {
+    /* Move donate button to the left when the menu opens */
+    nav ul.open~.nav-buttons #donate-btn {
+        right: auto; /* Disable the right alignment */
+        left: 10px; /* Move the button towards the left */
+        transform: translateX(0) translateY(-50%); /* No horizontal translation, keep vertical centering */
+    }
+}
+
+
 
 
 /* Between 670px and 860px for reduced font size */
