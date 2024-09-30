@@ -288,7 +288,7 @@ nav .fas {
     /* Move donate button slightly to the left from center when menu opens */
     nav ul.open~.nav-buttons #donate-btn {
         right: 30%; /* Position it slightly left from center */
-        transform: translateX(70%) translateY(-50%); /* Shift it horizontally by 30% to fine-tune the position */
+        transform: translateX(30%) translateY(-50%); /* Shift it horizontally by 30% to fine-tune the position */
     }
 }
 
