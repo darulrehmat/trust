@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-US-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar-ul-Rehmat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a0875b638a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!------header--------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#managing-committee">Managing Committee</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <div class="nav-buttons">
+                    <button id="donate-btn">Donate</button>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Donation pop-up -->
+        <div id="donate-popup" class="popup-overlay">
+            <div class="popup-content">
+                <h3>Bank Details</h3>
+                <p id="bank-details">
+                    Meezan Bank<br>
+                    Account No: 1001 0101386992<br>
+                    IBAN: PK21 MEZN 0010 0101 0138 6992
+                    <i class="fas fa-copy" id="copy-icon" title="Copy Bank Details" onclick="copyBankDetails()"></i>
+                </p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <!------home--------->
+    <div id="home">
+        <div class="container">
+            <div class="image-container">
+                <picture>
+                    <source srcset="images/banner-image-700.png" media="(max-width: 700px)">
+                    <source srcset="images/banner-image-500.png" media="(max-width: 500px)">
+                    <source srcset="images/banner-image-100.png" media="(max-width: 100px)">
+                    <img src="images/banner-image.png" alt="Hospital Banner">
+                </picture>
+            </div>
+            <br><br>
+            <h1 class="heading-text">FACTS</h1>
+            <div class="row">
+                <div class="box">
+                    <span class="large-text">Free</span>
+                    <div class="small-text">treatment</div>
+                </div>
+                <div class="box">
+                    <span class="large-text">13</span>
+                    <div class="small-text">doctors</div>
+                </div>
+                <div class="box">
+                    <span class="large-text">200</span>
+                    <div class="small-text">patients treated daily</div>
+                </div>
+                <div class="box">
+                    <span class="large-text">12</span>
+                    <div class="small-text">types of diseases treated</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------about Us--------->
+    <div id="about-us">
+        <div class="container">
+            <h1 class="heading-text">ABOUT US</h1>
+            <div class="about-row">
+                <div class="about-col-1">
+                    <p>
+                        Established in 2008, Dar-Ul-Rehmat Trust is a charitable healthcare organization founded on the
+                        vision of Mian Allah Wasia (late), who generously donated the land for its creation. We provide
+                        essential medical care to approximately 200 patients daily, treating a variety of conditions
+                        including general medicine, pediatrics, and gynecology.
+                        <br><br>
+                        Our dedicated team offers free or affordable healthcare to underserved communities, ensuring no
+                        one is turned away due to financial constraints. Committed to compassion and service, we
+                        continue to uphold our founder's mission of making healthcare accessible to all.
+                    </p>
+                </div>
+                <div class="about-col-2">
+                    <video controls autoplay muted>
+                        <source src="videos/No-video-title-fdown.net.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                </div>
+            </div>
+            <div class="donation-details">
+                <h3>Help Us Make a Difference</h3>
+                <h4>Your contribution ensures accessible healthcare for all.<br><strong>Donate today!</strong></h4>
+                <p id="bank-details">
+                    Meezan Bank<br>
+                    Account No: 1001 0101386992<br>
+                    IBAN: PK21 MEZN 0010 0101 0138 6992
+                    <i class="fas fa-copy" id="copy-icon" title="Copy Bank Details" onclick="copyBankDetails()"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- facilities -->
+    <div id="facilities">
+        <div class="container">
+            <h1 class="heading-text">FACILITIES</h1>
+            <div class="facilities-grid">
+                <div class="grid-item">
+                    <i class="fa-solid fa-syringe"></i>
+                    <p>Laboratory</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fa-solid fa-tv"></i>
+                    <p>Ultra Sound</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fa-solid fa-lungs-virus"></i>
+                    <p>Dialysis</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <p>ECG</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fa-solid fa-bed"></i>
+                    <p>Rehab Center<br>(Drug Addicts)</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fa-solid fa-hands-holding-child"></i>
+                    <p>Care & Cure<br>(Mentally Effected)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------Doctors--------->
+    <div id="doctors">
+        <div class="container">
+            <h1 class="heading-text">DOCTORS</h1>
+            <div class="doctor-container">
+                <div class="doctor-card department-bp">
+                    <p class="doctor-name">Dr. Muhammad Abu Bakar</p>
+                    <p class="department">Blood Pressure & Cholesterol</p>
+                    <p class="qualification">MBBS, FCPS - II</p>
+                    <p class="timing">Tuesday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-neuro">
+                    <p class="doctor-name">Dr. Amar Yasir</p>
+                    <p class="department">Brain Neurologist</p>
+                    <p class="qualification">MBBS, FCPS - Neurology</p>
+                    <p class="timing">Wednesday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-neuro">
+                    <p class="doctor-name">Dr. Salman Ashraf</p>
+                    <p class="department">Brain Neurologist</p>
+                    <p class="qualification">MBBS, FCPS - Neurology</p>
+                    <p class="timing">Wednesday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-gastro">
+                    <p class="doctor-name">Dr. Muhammad Adil</p>
+                    <p class="department">Liver, Stomach & Jaundice</p>
+                    <p class="qualification">MBBS, FCPS - Gastroenterology</p>
+                    <p class="timing">Thursday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-skin">
+                    <p class="doctor-name">Dr. Ahmed Haroon</p>
+                    <p class="department">Skin, Nail & Hair</p>
+                    <p class="qualification">MBBS, FCPS</p>
+                    <p class="timing">Thursday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-skin">
+                    <p class="doctor-name">Dr. Ahmed Shoaib</p>
+                    <p class="department">Skin, Nail & Hair</p>
+                    <p class="qualification">MBBS, M.D. Plonology</p>
+                    <p class="timing">Thursday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-psychiatry">
+                    <p class="doctor-name">Dr. Ateeq Al Rehman</p>
+                    <p class="department">Psychiatrist</p>
+                    <p class="qualification">MBBS, Consultant Psychiatrist</p>
+                    <p class="timing">Saturday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-psychiatry">
+                    <p class="doctor-name">Ayesha Siddiqa</p>
+                    <p class="department">Clinical Psychologist</p>
+                    <p class="qualification">MSC, ADCP</p>
+                    <p class="timing">Saturday 3pm - 6pm</p>
+                </div>
+
+                <div class="doctor-card department-psychiatry">
+                    <p class="doctor-name">Abbas Ali Waris</p>
+                    <p class="department">Clinical Psychologist</p>
+                    <p class="qualification">MSc, MPhil, MSPhD Scholar</p>
+                    <p class="timing">Sunday 10am - 1pm</p>
+                </div>
+
+                <div class="doctor-card department-nephrology">
+                    <p class="doctor-name">Dr.Faheem Usman Salhari</p>
+                    <p class="department">Nephrologist, Blood pressure, Sugar, dialysis, Kidney transplant</p>
+                    <p class="qualification">MBBS, FCHS(Nephrology)</p>
+                    <p class="timing">-</p>
+                </div>
+
+                <div class="doctor-card department-drug">
+                    <p class="doctor-name">Dr. Hanan Sarfraz</p>
+                    <p class="department">Drug Specialist</p>
+                    <p class="qualification">MBBS, MCPS (Psychiatry)</p>
+                    <p class="timing">Sunday 10am - 1pm</p>
+                </div>
+
+                <div class="doctor-card department-drug">
+                    <p class="doctor-name">Syed Imran Ali</p>
+                    <p class="department">Drugs Patient Counsellor</p>
+                    <p class="qualification">-</p>
+                    <p class="timing">-</p>
+                </div>
+
+                
+            </div>
+
+
+        </div>
+    </div>
+
+    <!------Managing Committee--------->
+    <div id="managing-committee">
+        <div class="container">
+            <h1 class="heading-text">MANAGING COMMITTEE</h1>
+            <div class="committee-container">
+                <div class="committee-member chief" data-role="chief">
+                    <h3>Sheikh Muhammad Ishfaq</h3>
+                    <p>Patron-in-Chief</p>
+                </div>
+
+                <div class="committee-member president" data-role="president">
+                    <h3>Muhammad Atif Ali</h3>
+                    <p>President</p>
+                </div>
+
+                <div class="committee-member president" data-role="president">
+                    <h3>Shehzad Sajid</h3>
+                    <p>Vice President</p>
+                </div>
+
+                <div class="committee-member secretary" data-role="secretary">
+                    <h3>Nadeem Yaseen Sheikh</h3>
+                    <p>General Secretary</p>
+                </div>
+
+                <div class="committee-member secretary" data-role="secretary">
+                    <h3>Maqsood Ahmed</h3>
+                    <p>Finance Secretary</p>
+                </div>
+
+                <div class="committee-member member" data-role="member">
+                    <h3>Muhammad Junaid</h3>
+                    <p>Member</p>
+                </div>
+
+                <div class="committee-member member" data-role="member">
+                    <h3>Muhammad Illyas Sheikh</h3>
+                    <p>Member</p>
+                </div>
+
+                <div class="committee-member member" data-role="member">
+                    <h3>Sheikh Muhammad Ahsan Basheer</h3>
+                    <p>Member</p>
+                </div>
+
+                <div class="committee-member member" data-role="member">
+                    <h3>Hafiz Munir Ahmed</h3>
+                    <p>Member</p>
+                </div>
+            </div>
+
+            <script src="script.js" defer></script>
+        </div>
+    </div>
+
+</body>
+
+</html>
